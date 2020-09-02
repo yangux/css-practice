@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>border triangle</title>
+        <style>
+            html {
+                box-sizing: border-box;
+            }
+            *, *::after, *::before {
+                box-sizing: inherit;
+            }
+            div {
+                margin: 30px;
+            }
+
+            /* border longhand properties */
+            div:first-of-type {
+                width: 200px; height: 200px;
+                border: 20px solid slateblue;
+                border-top-width: 10px;
+                border-top-color: skyblue;
+                border-right-width: 5px;
+                border-right-style: dashed;
+                border-right-color: orange;
+                border-bottom: 20px dotted red;
+            }
+            /* border without box sizing */
+            div:nth-of-type(2) {
+                width: 0; height: 0; 
+                border: 30px solid red;
+                border-left-color: gold;
+                border-top-color: skyblue;
+                border-right-color: coral;
+                border-bottom-color: lightseagreen;
+            }
+            /* leave a triangle by makiing others transparent */
+            div:nth-of-type(3) {
+                width: 0; height: 0; 
+                border-top: 30px solid hotpink;
+                border-left: 30px solid transparent;
+                border-right: 30px solid transparent;
+            }
+            div:last-of-type {
+                width: 0; height: 0; 
+                border-left: 15px solid purple;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>
