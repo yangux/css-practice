@@ -4,6 +4,12 @@
     <title>arrow box</title>
     <meta charset="utf-8">
     <style>
+      body {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+      }
+
       div.box {
         width: 300px;
         background-color: black;
@@ -18,23 +24,70 @@
       }
 
       /* arrow */
-      div.box::after {
+      div.box::before {
         content: '';
         display: block;
         width: 0; height: 0;
+      }
+
+      /* left arrow */
+      div.box:nth-of-type(1) {
+        background-color: tomato;
+      }
+      div.box:nth-of-type(1)::before {
         border: 1.5em solid transparent;
-        border-right-color: black;
+        border-right-color: tomato;
         position: absolute;
         top: 2em; left: -3em;
       }
 
-      
+      /* right arrow */
+      div.box:nth-of-type(2) {
+        background-color: orange;
+      }
+      div.box:nth-of-type(2)::before {
+        border: 1.5em solid transparent;
+        border-left-color: orange;
+        position: absolute;
+        top: 2em; right: -3em;
+      }
+
+      /* left arrow */
+      div.box:nth-of-type(3) {
+        background-color: mediumaquamarine;
+      }
+      div.box:nth-of-type(3)::before {
+        border: 1.5em solid transparent;
+        border-bottom-color: mediumaquamarine;
+        position: absolute;
+        top: -3em; right: 2em;
+      }
+
+      /* left arrow */
+      div.box:nth-of-type(4) {
+        background-color: cornflowerblue;
+      }
+      div.box:nth-of-type(4)::before {
+        border: 1.5em solid transparent;
+        border-top-color: cornflowerblue;
+        position: absolute;
+        bottom: -3em; right: 2em;
+      }
 
     </style>
   </head>
   <body>
     <div class="box">
       <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem rem quo obcaecati voluptatibus provident amet illum cupiditate aliquid odit impedit!</p>
+    </div>
+    <div class="box">
+      <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consequuntur sequi autem quasi! Itaque quasi neque necessitatibus, perspiciatis excepturi expedita consectetur ex inventore laborum, non, voluptatum praesentium temporibus ut repellendus?</p>
+    </div>
+    <div class="box">
+      <p class="message">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita quas iusto perferendis reprehenderit ad neque, quos error hic! Deleniti, iusto?</p>
+    </div>
+    <div class="box">
+      <p class="message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, suscipit!</p>
     </div>
   </body>
 </html>
