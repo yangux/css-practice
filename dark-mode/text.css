@@ -1,0 +1,59 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.li_selected a {
+  color: slateblue;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+h1 {
+  font-size: 4.8rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3.4rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+blockquote {
+  margin: 1.5em 0 2em 0;
+  padding: 0;
+}
+
+.text_tag {
+  font-family: monospace;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid gainsboro;
+  background-color: ghostwhite;
+  color: slateblue;
+  padding: 0 0.5em;
+  line-height: 1.2;
+  font-size: 1.6rem;
+}
+  
+
+@media screen and (min-width: 900px) {
+  blockquote {
+    margin: 1.5em 0 2em 0;
+    padding: 0 1.5em;
+    border-left: 3px solid #eee;
+  }
+}
